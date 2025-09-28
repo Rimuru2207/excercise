@@ -13,7 +13,21 @@
     overflow: hidden;
     height: 100vh;
   }
-  
+
+.btn-login {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #D97706; /* accent color */
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-login:hover {
+  background: #b45309;
+}
+
   /* Navbar styling */
   .navbar {
     display: flex;
