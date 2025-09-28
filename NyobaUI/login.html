@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — NyobaUI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #0f172a, #061226);
+      color: #e6eef8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .login-card {
+      background: #0b1220;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      width: 320px;
+    }
+    .login-card h2 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      color: #fff;
+      text-align: center;
+    }
+    .login-card label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .login-card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: transparent;
+      color: #e6eef8;
+      font-size: 15px;
+    }
+    .login-card button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #D97706; /* atau warna accent Anda */
+      color: #071124;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .login-card .link {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .login-card .link a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Masuk ke Akun Anda</h2>
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+      <label for="password">Kata Sandi</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="link">
+      Belum punya akun? <a href="register.html">Daftar di sini</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      // Tambahkan validasi / panggil API login di sini
+      console.log('Login dengan:', email, password);
+      alert('Contoh: login berhasil (simulasi)');
+      // redirect, dsb.
+    });
+  </script>
+</body>
+</html>
