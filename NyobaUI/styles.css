@@ -1,0 +1,96 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling body and background */
+  body {
+    background: radial-gradient(circle at bottom, #2c235a, #000);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .actions .connect-btn {
+    background: linear-gradient(90deg, #ff61e6, #5a9dff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  /* Button hover effect */
+  .actions .connect-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Hero section styling */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Adjust for navbar height */
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    background: linear-gradient(to right, #e4e4e4, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Floating shapes */
+  .floating-shapes .shape {
+    position: absolute;
+    border: 2px solid #7d5aff;
+    border-radius: 20%;
+    opacity: 0.8;
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
