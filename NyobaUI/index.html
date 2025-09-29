@@ -10,8 +10,8 @@
   <header class="navbar">
     <div class="logo">dippp.png</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Search</a>
+      <a href="#" id="menuHome">Home</a>
+      <a href="#" id="menuSearch">Search</a>
       <a href="https://nhentai.net/tags/">Tag</a>
       <a href="https://www.instagram.com/akigata_/">Contact</a>
       <a href="https://chatgpt.com/">Maid</a>
@@ -21,17 +21,41 @@
     </div>
   </header>
 
-  <main class="hero">
-    <div class="floating-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-    <h1>Selamat Datang di (under construction)</h1>
-    <h2>GA ADA APA APA DISINI</h2>
+  <main>
+    <!-- UI INDEX -->
+    <section id="uiHome" class="hero">
+      <div class="floating-shapes"></div>
+      <h1>Selamat Datang di (under construction)</h1>
+      <h2>GA ADA APA APA DISINI</h2>
+    </section>
+    <!-- UI SEARCH -->
+    <section id="uiSearch" class="hero" style="display:none;">
+      <h1>Pencarian</h1>
+      <input type="text" id="searchInput" placeholder="Ketik sesuatu..." />
+      <button id="btnSearch">Cari</button>
+      <div id="searchResult"></div>
+    </section>
+    <!-- UI LOGIN -->
+    <section id="uiLogin" class="hero" style="display:none;">
+      <div class="login-card">
+        <h2>Masuk ke Akun Anda</h2>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+          <label for="password">Kata Sandi</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+          <button type="submit">Login</button>
+        </form>
+        <div class="link">
+          Belum punya akun? <a href="#">Daftar di sini</a>
+        </div>
+      </div>
+    </section>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
