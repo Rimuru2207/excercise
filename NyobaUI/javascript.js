@@ -38,3 +38,55 @@ const connectButton = document.querySelector('.connect-btn');
 connectButton.addEventListener('click', () => {
   alert('Thank you for connecting! 🚀');
 });
+// UI switching
+document.addEventListener("DOMContentLoaded", function () {
+  const uiHome = document.getElementById("uiHome");
+  const uiSearch = document.getElementById("uiSearch");
+  const uiLogin = document.getElementById("uiLogin");
+
+  const menuHome = document.getElementById("menuHome");
+  const menuSearch = document.getElementById("menuSearch");
+  const menuLogin = document.getElementById("menuLogin");
+
+  function showUI(section) {
+    uiHome.style.display = "none";
+    uiSearch.style.display = "none";
+    uiLogin.style.display = "none";
+
+    section.style.display = "flex"; // pakai flex agar sesuai hero
+  }
+
+  menuHome.addEventListener("click", (e) => {
+    e.preventDefault();
+    showUI(uiHome);
+  });
+
+  menuSearch.addEventListener("click", (e) => {
+    e.preventDefault();
+    showUI(uiSearch);
+  });
+
+  menuLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    showUI(uiLogin);
+  });
+
+  // fungsi search sederhana
+  document.getElementById("btnSearch").addEventListener("click", () => {
+    const query = document.getElementById("searchInput").value;
+    const resultDiv = document.getElementById("searchResult");
+    resultDiv.innerHTML = query
+      ? `<p>Hasil pencarian untuk: <b>${query}</b></p>`
+      : "<p>Masukkan kata untuk mencari</p>";
+  });
+
+  // fungsi login sederhana
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    alert(`Login berhasil!\nEmail: ${email}`);
+    showUI(uiHome); // balik ke home setelah login
+  });
+});
+
