@@ -1,2 +1,2 @@
 # excercise
-isinya !!^^%!JAsJns
+Lazy Ass
